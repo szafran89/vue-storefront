@@ -6,6 +6,7 @@
         :class="{pr30: type === 'password', empty: value === ''}"
         :type="type === 'password' ? passType : type"
         :name="name"
+        :min="min"
         :autocomplete="autocomplete"
         :value="value"
         :autofocus="autofocus"

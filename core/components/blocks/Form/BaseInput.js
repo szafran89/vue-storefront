@@ -31,6 +31,11 @@ export default {
       required: false,
       default: ''
     },
+    min: {
+      type: [Number, Boolean],
+      required: false,
+      default: false
+    },
     focus: {
       type: Boolean,
       required: false,
