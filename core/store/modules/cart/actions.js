@@ -4,6 +4,7 @@ import rootStore from '../../'
 import EventBus from '../../lib/event-bus'
 import i18n from '../../lib/i18n'
 import hash from 'object-hash'
+import { htmlDecode } from '../../lib/filters'
 import { currentStoreView } from '../../lib/multistore'
 const CART_PULL_INTERVAL_MS = 2000
 const CART_CREATE_INTERVAL_MS = 1000
@@ -234,10 +235,20 @@ export default {
             action1: { label: i18n.t('OK'), action: 'close' }
           })
         }
-        if (result.status === 'ok' || result.status === 'volatile') {
+
+        const recordQty = record ? record.qty : 0
+        const totalQty = product.qty + recordQty
+        if ((result.status === 'ok' || result.status === 'volatile') && totalQty <= result.qty) {
           commit(types.CART_ADD_ITEM, { product })
           productHasBeenAdded = true
+        } else {
+          EventBus.$emit('notification', {
+            type: 'error',
+            message: i18n.t("We don't have as many {productName} as you requested.", { productName: htmlDecode(product.name) }),
+            action1: { label: i18n.t('OK'), action: 'close' }
+          })
         }
+
         if (productIndex === (productsToAdd.length - 1) && productHasBeenAdded) {
           EventBus.$emit('notification', {
             type: 'success',

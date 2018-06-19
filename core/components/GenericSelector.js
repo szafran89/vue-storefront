@@ -34,6 +34,7 @@ export default {
   created () {
     this.$bus.$on('filter-reset', this.filterReset)
     this.$bus.$on('filter-changed-' + this.context, this.filterChanged)
+    this.$bus.$emit('simulate-filter-changed-' + this.context, this.filterChanged)
   },
   methods: {
     filterChanged (filterOption) {

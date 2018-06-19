@@ -17,7 +17,8 @@ export default {
   mixins: [Composite],
   data () {
     return {
-      loading: false
+      loading: false,
+      qty: 1
     }
   },
   computed: {
@@ -118,6 +119,7 @@ export default {
     this.$bus.$on('filter-changed-product', this.onAfterFilterChanged)
     this.$bus.$on('product-after-customoptions', this.onAfterCustomOptionsChanged)
     this.$bus.$on('product-after-bundleoptions', this.onAfterBundleOptionsChanged)
+    this.$bus.$once('simulate-filter-changed-product', this.onAfterFilterChanged)
   },
   methods: {
     validateRoute () {

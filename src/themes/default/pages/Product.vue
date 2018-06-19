@@ -130,9 +130,24 @@
               :product="product"
             />
             <div class="row m0">
+              <div
+                v-if="product.type_id === 'simple' || product.type_id === 'configurable'"
+                class="col-xs-3 pr30"
+              >
+                <label class="m0 h6 c-gray" for="qty">
+                  {{ $t('Quantity') }}
+                </label>
+                <base-input
+                  type="number"
+                  name="qty"
+                  :min="1"
+                  v-model.number="qty"
+                />
+              </div>
               <add-to-cart
                 :product="product"
-                class="col-xs-12 col-sm-4 col-md-6"
+                :qty="qty"
+                class="col-xs-9 col-sm-4 col-md-6"
               />
             </div>
             <div class="row py40 add-to-buttons">
@@ -224,6 +239,7 @@ import Product from 'core/pages/Product'
 
 import RelatedProducts from 'theme/components/core/blocks/Product/Related.vue'
 import AddToCart from 'theme/components/core/AddToCart.vue'
+import BaseInput from 'theme/components/core/blocks/Form/BaseInput.vue'
 import GenericSelector from 'theme/components/core/GenericSelector'
 import ColorSelector from 'theme/components/core/ColorSelector.vue'
 import SizeSelector from 'theme/components/core/SizeSelector.vue'
@@ -240,6 +256,7 @@ import focusClean from 'theme/components/theme/directives/focusClean'
 export default {
   components: {
     AddToCart,
+    BaseInput,
     Breadcrumbs,
     ColorSelector,
     GenericSelector,
