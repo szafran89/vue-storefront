@@ -132,7 +132,7 @@
             <div class="row m0">
               <div
                 v-if="product.type_id === 'simple' || product.type_id === 'configurable'"
-                class="col-xs-3 pr30"
+                class="col-xs-12 col-sm-3 pr30 row between-xs qty-wrapper"
               >
                 <label class="m0 h6 c-gray" for="qty">
                   {{ $t('Quantity') }}
@@ -147,7 +147,7 @@
               <add-to-cart
                 :product="product"
                 :qty="qty"
-                class="col-xs-9 col-sm-4 col-md-6"
+                class="col-xs-12 col-sm-4 col-md-6"
               />
             </div>
             <div class="row py40 add-to-buttons">
@@ -359,6 +359,14 @@ $bg-secondary: color(secondary, $colors-background);
       width: 100%;
       margin-left: 0;
     }
+  }
+}
+
+.qty-wrapper {
+  flex-direction: column;
+  @media (max-width: 767px) {
+    margin: 0;
+    padding: 0 0 10px 0;
   }
 }
 
