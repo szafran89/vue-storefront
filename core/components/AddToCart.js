@@ -1,3 +1,5 @@
+import { addToCart } from 'core/api/cart'
+
 export default {
   name: 'AddToCart',
   props: {
@@ -10,10 +12,5 @@ export default {
       required: true
     }
   },
-  methods: {
-    addToCart (product) {
-      this.product.qty = this.qty === '' ? 1 : this.qty
-      this.$store.dispatch('cart/addItem', { productToAdd: product })
-    }
-  }
+  mixins: [ addToCart ]
 }

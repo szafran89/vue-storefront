@@ -4,7 +4,6 @@ import App from 'theme/App'
 import store from '@vue-storefront/store'
 import router from 'core/router'
 import config from 'config'
-import appExtend from 'theme/app-extend'
 import { sync } from 'vuex-router-sync'
 import EventBus from 'core/plugins/event-bus'
 
@@ -26,7 +25,7 @@ import themeModules from 'theme/store'
 
 if (!global.$VS) global.$VS = {}
 
-global.$VS.version = '1.0.5'
+global.$VS.version = '1.1'
 
 const storeModules = Object.assign(coreModules, themeModules || {})
 
@@ -59,8 +58,6 @@ const filtersObject = filters()
 Object.keys(filtersObject).forEach(key => {
   Vue.filter(key, filtersObject[key])
 })
-
-appExtend(Vue)
 
 export function createApp () {
   sync(store, router)

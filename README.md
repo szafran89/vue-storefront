@@ -1,6 +1,5 @@
 # Vue Storefront - headless PWA for eCommerce 
 <a href="https://travis-ci.org/DivanteLtd/vue-storefront"><img src="https://travis-ci.org/DivanteLtd/vue-storefront.svg?branch=master" alt="build:passed"></a> 
-![version](https://img.shields.io/badge/version-1.0%20RC-blue.svg) 
 ![version](https://img.shields.io/badge/node-v8.x-blue.svg) 
 ![Branch stable](https://img.shields.io/badge/stable%20branch-master-blue.svg) 
 ![Branch Develop](https://img.shields.io/badge/dev%20branch-develop-blue.svg)
@@ -171,8 +170,7 @@ Tutorial series on creating themes for Vue Storefront:
 * [Vue Storefront + Pimcore](https://github.com/DivanteLtd/pimcore2vuestorefront)
 * [Direct prices sync with Magento](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Direct%20Prices.md)
 * [Shopping carts, totals and orders sync](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Totals%2C%20cart%2C%20orders%20sync%20with%20Magento.md)
-* [How to connect 3rd party platform to Vue Storefront?](https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6)
-* [VueStorefrontBridge API docs](https://github.com/DivanteLtd/magento1-vsbridge/blob/master/doc/VueStorefrontBridge%20API%20specs.md) - this is the API You should implement to integrate 3rd party platform
+* [Vue Storefront 3rd party platforms integration boilerplate](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate) - this is the API You should implement to integrate 3rd party platform
 * [Magento2 MultiStore support](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Multistore%20setup.md)
 
 ### 'Default theme' contribution rules
@@ -350,11 +348,11 @@ Vue Storefront is a Community effort brought to You by our great Core Team and s
           >
         </a>
       </td>
-      <td align="center" valign="middle">
-        <a href="https://magedirect.co/">
+       <td align="center" valign="middle">
+        <a href="https://vendic.nl/">
           <img
-            src="https://user-images.githubusercontent.com/18116406/38415925-4a31e358-3993-11e8-9bee-b2b9af95d305.png"
-            alt="MageDirect"
+            src="https://divante.co/partners/Vue-Storefront/vendic-rood.png"
+            alt="Vendic"
             height="50"
           >
         </a>
@@ -382,6 +380,100 @@ Vue Storefront is a Community effort brought to You by our great Core Team and s
           <img
             src="https://user-images.githubusercontent.com/18116406/39051477-0c46c1aa-44a9-11e8-8f53-0adabe3e66a4.png"
             alt="Imagination Media"
+            height="50"
+          >
+        </a>
+      </td>
+    </tr>
+    <tr>
+        <td align="center" valign="middle">
+        <a href="https://magedirect.co/">
+          <img
+            src="https://user-images.githubusercontent.com/18116406/38415925-4a31e358-3993-11e8-9bee-b2b9af95d305.png"
+            alt="MageDirect"
+            height="50"
+          >
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://www.edmondscommerce.co.uk/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/edmonds-ecommerce.png"
+            alt="Edmonds Commerce"
+            height="50"
+          >
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://www.kt-team.ru/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/kt.team.png"
+            alt="KT Team"
+            height="50"
+          >
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="https://magebit.com/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/Magebit_150px.png"
+            alt="MageBit"
+            height="50"
+          >
+        </a>
+      </td>
+     <td align="center" valign="middle">
+        <a href="https://upsidelab.io/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/upside-logo@4x.png"
+            alt="UpsideLab"
+            height="50"
+          >
+        </a>
+       </td>
+    </tr>
+     <tr>
+       <td align="center" valign="middle">
+        <a href="http://meigee.team/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/meigee.png"
+            alt="Meigee"
+            height="50"
+          >
+        </a>
+      </td>
+         <td align="center" valign="middle">
+        <a href="https://webvisum.de/">
+          <img
+            src="https://divante.co/partners/Vue-Storefront/Webvisium-Logo.png"
+            alt="WebVisum"
+            height="50"
+          >
+        </a>
+      </td>
+      <td align="center" valign="middle">
+        <a href="">
+          <img
+            src=""
+            alt=""
+            height="50"
+          >
+        </a>
+      </td>
+  <td align="center" valign="middle">
+        <a href="">
+          <img
+            src=""
+            alt=""
+            height="50"
+          >
+        </a>
+      </td>
+        <td align="center" valign="middle">
+        <a href="">
+          <img
+            src=""
+            alt=""
             height="50"
           >
         </a>

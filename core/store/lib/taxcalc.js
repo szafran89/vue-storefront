@@ -21,7 +21,7 @@ export function updateProductPrices (product, rate, sourcePriceInclTax = false) 
   product.specialPriceTax = (specialPriceExclTax * (parseFloat(rate.rate) / 100))
 
   if (product.special_price && (product.special_price < product.price)) {
-    if ((product.special_to_date && new Date(product.special_to_date) > new Date()) || (product.special_from_date && new Date(product.special_from_date) < new Date())) {
+    if ((product.special_to_date && new Date(product.special_to_date) < new Date()) || (product.special_from_date && new Date(product.special_from_date) > new Date())) {
       product.special_price = 0 // out of the dates period
     } else {
       product.originalPrice = priceExclTax
@@ -63,7 +63,7 @@ export function updateProductPrices (product, rate, sourcePriceInclTax = false) 
       configurableChild.specialPriceTax = (specialPriceExclTax * (parseFloat(rate.rate) / 100))
 
       if (configurableChild.special_price && (configurableChild.special_price < configurableChild.price)) {
-        if ((configurableChild.special_to_date && new Date(configurableChild.special_to_date) > new Date()) || (configurableChild.special_from_date && new Date(configurableChild.special_from_date) < new Date())) {
+        if ((configurableChild.special_to_date && new Date(configurableChild.special_to_date) < new Date()) || (configurableChild.special_from_date && new Date(configurableChild.special_from_date) > new Date())) {
           configurableChild.special_price = 0 // out of the dates period
         } else {
           configurableChild.originalPrice = priceExclTax
